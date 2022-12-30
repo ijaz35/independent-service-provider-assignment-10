@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.banner-container {
+    position: relative;
+    background-position: -150px -400px;
+    min-height: 850px;
+    text-align: center;
+    background-image: url('../../../images/banner.jpg');
+    border-radius: 0 0 25% 25%;
+}
+
+.dark-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 10%;
+    color: white;
+    border-radius: 0 0 25% 25%;
+
+}
+
+.banner-info h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 5rem;
+    font-weight: 500;
+
+
+}
+
+.banner-info p {
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btn-purchase {
+    width: 215px;
+    height: 48px;
+    background-color: rgb(207, 175, 95);
+    cursor: pointer;
+    border: none;
+    letter-spacing: 4px;
+    color: white;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

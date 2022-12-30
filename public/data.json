@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "name": "Wedding catering",
+        "description": "Providing food and drink at off-site locations, including hotels, hospitals, cruise ships, and special occasions like weddings, is what caterers do for a living. ",
+        "img": "https://i.ibb.co/8jXs9cB/ico1.png"
+    },
+    {
+        "id": "2",
+        "name": "Event rehearsal",
+        "description": "Making your events more significant our special team gives you a event rehearsal.",
+        "img": "https://i.ibb.co/sKbstXR/icon2-1.png"
+    },
+    {
+        "id": "3",
+        "name": "Timeline management",
+        "description": "First and foremost, we always start off by sitting down with our clients to discuss their vision for the day. ",
+        "img": "https://i.ibb.co/025nFrg/icon3-1.png"
+    },
+    {
+        "id": "4",
+        "name": "Fashion consulting",
+        "description": "Wedding dress consultants are specialized retail sales associates who work one-on-one with brides to help them find gowns and accessories in wedding.",
+        "img": "https://i.ibb.co/sgkB7p2/icon4-1.png"
+    },
+    {
+        "id": "5",
+        "name": "Dress shopping",
+        "description": "We are giving you a option to shop your wedding dress through our team. we have good linkup with some renowned fashion houses and shops",
+        "img": "https://i.ibb.co/0c2MqdQ/icon5-1.png"
+    },
+    {
+        "id": "6",
+        "name": "Event favours",
+        "description": "We have efficient team to solve any kind of event problems and gives you a event favour as required.",
+        "img": "https://i.ibb.co/st6bRCk/icon6-1.png"
+    }
+]

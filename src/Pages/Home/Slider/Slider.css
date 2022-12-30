@@ -1,0 +1,15 @@
+.carousel-status {
+    display: none;
+}
+
+.testimonial-outer-container {
+    background-image: url('../../../images/testimonial/testimonial-background.jpg');
+    min-height: 600px;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+    background-position: 9px 50px;
+}
+
+.slider-dark-overlay {
+    background-color: rgba(0, 0, 0, 0.42);
+}

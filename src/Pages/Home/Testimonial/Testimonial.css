@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+.testimonial-container {
+    font-family: 'Crimson Text', serif;
+    font-weight: 500;
+    font-size: larger;
+}
