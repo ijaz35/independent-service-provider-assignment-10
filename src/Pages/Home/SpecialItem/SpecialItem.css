@@ -1,11 +1,14 @@
 .read-btn {
     width: 177px;
     height: 48px;
-    background-color: rgb(207, 175, 95);
+    background-color: rgb(194, 160, 112);
     cursor: pointer;
     border: none;
-
     color: white;
     border-radius: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.read-btn:hover {
+    background-color: black;
 }

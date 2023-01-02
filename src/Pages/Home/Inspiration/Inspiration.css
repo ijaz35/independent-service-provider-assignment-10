@@ -1,0 +1,17 @@
+.inspiration-card:hover {
+    margin-top: -15px;
+    box-shadow: 0 0 50px 20px rgba(5, 5, 5, 0.15);
+}
+
+.inspiration-icons {
+    color: rgb(194, 160, 112)
+}
+
+.inspiration-btn {
+    letter-spacing: 5px;
+    ;
+}
+
+.inspiration-btn:hover {
+    color: rgb(194, 160, 112)
+}

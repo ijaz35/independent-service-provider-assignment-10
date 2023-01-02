@@ -1,0 +1,39 @@
+.footer-container h6 {
+    text-align: left;
+    color: rgb(194, 160, 112);
+    margin-bottom: 20px;
+}
+
+.footer-container h6:hover::after {
+
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: rgb(194, 160, 112);
+    width: 50%;
+    margin-top: 10px;
+}
+
+.footer-container ul {
+    padding-left: 0;
+    text-align: left;
+    line-height: 2rem;
+}
+
+.footer-container ul li {
+
+    list-style-type: none;
+}
+
+.footer-container ul li:hover {
+    color: rgb(194, 160, 112);
+}
+
+.footer-container {
+    text-align: left;
+}
+
+.social-icon {
+    color: rgb(194, 160, 112);
+    font-size: 22px;
+}

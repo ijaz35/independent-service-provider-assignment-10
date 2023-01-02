@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.plan-card-container:nth-child(2) {
+    background-color: #fff;
+    border-top: 3px solid rgb(194, 160, 112);
+    box-shadow: 0 0 10px 20px rgba(211, 211, 211, 0.194);
+}
+
+.plan-card {
+    background-color: inherit;
+    border: none;
+}
+
+
+.plan-pricing {
+    font-family: 'Dancing Script', cursive;
+    ;
+}
+
+.plan-btn {
+    width: 202px;
+    height: 48px;
+    border: none;
+    color: #fff;
+    background-color: rgb(194, 160, 112);
+    border-radius: 20px;
+}

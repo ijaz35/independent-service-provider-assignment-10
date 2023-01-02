@@ -1,0 +1,12 @@
+.sidebar {
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    color: rgb(194, 160, 112);
+    border-radius: 10px 0 0 10px;
+    top: 35%;
+    right: 0;
+}
+
+.sidebar-icon:hover {
+    color: black;
+}

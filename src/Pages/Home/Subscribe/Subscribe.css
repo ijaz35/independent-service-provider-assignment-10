@@ -1,0 +1,45 @@
+.subscribe-container {
+    background-image: url('../../../images/subscribe.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 400px;
+    background-position: -160px 0;
+}
+
+.subscribe-dark-overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sub-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.subscribe-input-container input:first-child {
+    border-radius: 25px;
+    border: none;
+
+}
+
+.subscribe-input-container input:nth-child(2) {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: rgb(194, 160, 112);
+    width: 30%;
+    border-radius: 0 25px 25px 0;
+    color: white;
+}
+
+@media only screen and (max-width: 990px) {
+    .subscribe-input {
+        width: 100%;
+    }
+
+    .subscribe-input-container input:nth-child(2) {
+        position: static;
+        width: 100%;
+        border-radius: 25px;
+    }
+}

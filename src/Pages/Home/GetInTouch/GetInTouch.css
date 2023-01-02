@@ -1,0 +1,38 @@
+.getInTouch-container {
+    background-image: url('../../../images/getintouchBackgriund.jpg');
+    min-height: 600px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.touch-dark-overlay {
+    background-color: rgba(0, 0, 0, 0.263);
+    color: white;
+
+}
+
+.play-btn {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: rgb(194, 160, 112);
+    border: none;
+    color: white;
+    font-size: 3rem;
+    transition: background-color .5s ease-out, color .5s ease-out, font-size 2s;
+}
+
+.play-btn:hover {
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+}
+
+.touch-btn {
+    width: 202px;
+    height: 48px;
+    background-color: rgb(194, 160, 112);
+    border: none;
+    border-radius: 20px;
+    color: white;
+}

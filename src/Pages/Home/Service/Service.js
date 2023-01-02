@@ -1,13 +1,14 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import './Service.css'
 
 const Service = ({ service }) => {
     const { name, description, img } = service;
     return (
         <div className='col-md-12 col-lg-4 '>
-            <Card className='p-4' style={{ width: '18rem' }}>
-                <Card.Img className='w-25 mx-auto' variant="top" src={img} />
-                <Card.Body>
+            <Card className='service-card p-4 ' style={{ width: '20rem' }}>
+                <Card.Img className='w-50 mx-auto mt-2' variant="top" src={img} />
+                <Card.Body className='mt-4 pt-3' >
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
                         {description}
