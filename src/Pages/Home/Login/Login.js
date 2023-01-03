@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import img from '../../../images/login.jpg'
 import SocialLogIn from '../../SocialLogIn/SocialLogIn';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
 
 const Login = () => {
+    const emailRef = useRef('')
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/';
     const [registered, setRegistered] = useState(false);
     const [validated, setValidated] = useState(false);
 
@@ -24,14 +29,19 @@ const Login = () => {
         user1,
         error2,
     ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(
+        auth
+    );
     let errorElement;
     if (loading || updating) {
-        return <h1>Loading...</h1>
+        return <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+        </div>
     }
     if (user || user1) {
         /*  console.log(user)
          console.log(user1) */
-        navigate('/')
+        navigate(from, { replace: true })
     }
 
     if (error || error1 || error2) {
@@ -44,6 +54,8 @@ const Login = () => {
     const handleRegister = event => {
         setRegistered(event.target.checked);
     }
+
+
 
     const handleFormSubmit = async event => {
         event.preventDefault();
@@ -74,6 +86,17 @@ const Login = () => {
         }
     }
 
+    const resetPassword = async event => {
+        const email = emailRef.current.value;
+        console.log(email)
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Password rest email sent');
+        } else {
+            alert('Please enter your email')
+        }
+    }
+
     return (
         <div className='container  my-5 py-5 '>
             <div className="social-container row mx-auto">
@@ -97,7 +120,7 @@ const Login = () => {
                                 </Form.Group>}
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label className='text-start ps-2 w-100'>Email address</Form.Label>
-                                    <Form.Control name='email' type="email" placeholder="Enter email" required />
+                                    <Form.Control ref={emailRef} name='email' type="email" placeholder="Enter email" required />
                                     <Form.Text className="text-muted w-100 text-start d-block ps-2">
                                         We'll never share your email with anyone else.
                                     </Form.Text>
@@ -109,7 +132,7 @@ const Login = () => {
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
                                     <Form.Label className='text-start ps-2 w-100'>Password</Form.Label>
                                     <Form.Control name='password' type="password" placeholder="Password" required />
-                                    {registered && <button className='btn btn-link text-end w-100 mt-2'>Forget Password</button>}
+                                    {registered && <button onClick={resetPassword} className='btn btn-link text-end w-100 mt-2'>Forget Password</button>}
                                     <Form.Control.Feedback className='text-start ps-2 w-100' type="invalid">
                                         Enter your password.
                                     </Form.Control.Feedback>
@@ -139,6 +162,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

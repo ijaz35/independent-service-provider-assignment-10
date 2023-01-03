@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './BookingForm.css'
 
 
 const BookingForm = () => {
+    const navigate = useNavigate();
     const handleBookingFormSubmit = event => {
         event.preventDefault()
         const firstName = event.target.firstName.value;
@@ -26,6 +28,7 @@ const BookingForm = () => {
         const guestNumber = event.target.guestNumber.value;
 
         console.log(fullName, address, phoneNumber, email, brideFullName, bridePhone, brideEmail, groomFullName, groomPhone, groomEmail, date, time, guestNumber);
+        navigate('/');
 
     }
     return (
