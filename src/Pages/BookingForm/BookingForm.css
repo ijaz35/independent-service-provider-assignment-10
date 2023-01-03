@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+.booking-form-container {
+    font-family: 'Bellefair', serif;
+}
+
+.booking-form-container h1,
+.booking-form-container h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    color: rgb(194, 160, 112);
+}
+
+
+
+.booking-form-container input,
+.booking-form-container textarea {
+    background-color: #ededed;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+
+.booking-form-container p {
+    margin-bottom: 5px;
+}
+
+#booking-submit-btn {
+    background-color: rgb(194, 160, 112);
+    color: white;
+}
