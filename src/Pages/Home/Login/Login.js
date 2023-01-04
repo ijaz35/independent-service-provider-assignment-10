@@ -76,13 +76,11 @@ const Login = () => {
             if (password === confirmPassword) {
                 await createUserWithEmailAndPassword(email, password);
                 await updateProfile({ displayName: name })
-                // console.log('create')
             } else {
                 alert('Passwords do not match')
             }
         } else {
             await signInWithEmailAndPassword(email, password);
-            // console.log('logged')
         }
     }
 

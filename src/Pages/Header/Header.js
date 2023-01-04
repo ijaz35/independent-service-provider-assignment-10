@@ -6,14 +6,9 @@ import auth from '../../firebase.init';
 import './Header.css'
 
 const Header = () => {
-    const [user, loading] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const [signOut] = useSignOut(auth);
-    if (loading) {
-        return <h1>Loading...</h1>
-    }
-    if (user) {
-        console.log(user)
-    }
+
     return (
         <div className='position-relative w-100'>
             <Navbar className='navbar-container position-absolute top-0 left-0 w-100 py-5' expand="lg">
