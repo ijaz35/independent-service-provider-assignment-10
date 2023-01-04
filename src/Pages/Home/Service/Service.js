@@ -1,8 +1,10 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './Service.css'
 
 const Service = ({ service }) => {
+    const navigate = useNavigate();
     const { name, description, img } = service;
     return (
         <div className='col-md-12 col-lg-4 '>
@@ -13,7 +15,7 @@ const Service = ({ service }) => {
                     <Card.Text>
                         {description}
                     </Card.Text>
-
+                    <button onClick={() => navigate('/booking')} className='service-btn px-3 py-2 mt-2'>See more</button>
                 </Card.Body>
             </Card>
         </div>

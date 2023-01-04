@@ -2,3 +2,10 @@
     box-shadow: 0 0 10px 10px lightgray;
     border-bottom: 3px solid rgb(194, 160, 112)
 }
+
+.service-btn {
+    border: none;
+    background-color: rgb(194, 160, 112);
+    color: white;
+    border-radius: 10px;
+}
